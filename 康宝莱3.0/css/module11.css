@@ -1,0 +1,211 @@
+body,html{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+.main{
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  position: relative;
+}
+.moduleLogo{
+  height:20%;
+  position: absolute;
+  bottom: 0.3%;
+  right: 4%;
+  -webkit-animation:tada 3s linear 3s infinite;
+  animation: tada 3s linear 3s infinite;
+}
+.jNext{
+  height: 5%;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+  z-index: 1111;
+}
+.blue{
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 12.5%;
+  height: 38.2%;
+  -webkit-animation: fadeInDown 2s ease 0.5s forwards;
+  animation: fadeInDown 2s ease 0.5s forwards;
+}
+.blueLeft{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 61.6%;
+  width: 10.1%;
+  -webkit-animation: fadeInLeft 2s ease 0.5s forwards;
+  animation: fadeInLeft 2s ease 0.5s forwards;
+}
+.gane{
+  position: absolute;
+  top:39%;
+  right: 0;
+  height: 10.29%;
+  width: 47.65%;
+  -webkit-animation: fadeInRight 2s ease 1s forwards;
+  animation: fadeInRight 2s ease 1s forwards;
+}
+.mou1{
+  position: absolute;
+  top:0;
+  right: 13.5%;
+  height: 38.2%;
+  width: 75%;
+  -webkit-animation: fadeInDown 2s ease 1s forwards;
+  animation: fadeInDown 2s ease 1s forwards;
+}
+.mou2{
+  position: absolute;
+  top:39%;
+  left: 11.2%;
+  height: 22.8%;
+  width: 39.8%;
+  -webkit-animation: fadeInDown 2.5s ease 3s forwards;
+  animation: fadeInDown 2.5s ease 3s forwards;
+}
+.mou3{
+  position: absolute;
+  top:62.7%;
+  left: 0%;
+  height: 15.4%;
+  width: 51%;
+  -webkit-animation: fadeInLeft 2s ease 2s forwards;
+  animation: fadeInLeft 2s ease 2s forwards;
+}
+.mou4{
+  position: absolute;
+  top:50%;
+  right: 0%;
+  height: 28.2%;
+  width: 47.65%;
+  -webkit-animation: fadeInRight 2s ease 2.5s forwards;
+  animation: fadeInRight 2s ease 2.5s forwards;
+}
+.mou5{
+  position: absolute;
+  bottom:0;
+  left: 28%;
+  height: 21%;
+  width: 55%;
+  -webkit-animation: fadeInUp 2.5s ease 3s forwards;
+  animation: fadeInUp 2.5s ease 3s forwards;
+}
+.modName1{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  height: 21%;
+  width: 26.56%;
+}
+.logoBlue{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  height: 21%;
+  width: 15.625%;
+}
+
+/*.m1{
+  width: 50%;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+.m1box{
+  position: absolute;
+  top: 1%;
+  left: 24%;
+  width: 100%;
+  -webkit-animation: fadeInDown 2s ease 0.5s forwards;
+  animation: fadeInDown 2s ease 0.5s forwards;
+  overflow: hidden;
+}
+.m2{
+  width: 30%;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+.m2box{
+  position: absolute;
+  top: 41%;
+  left: 16%;
+  width: 100%;
+  -webkit-animation: fadeInLeft 2s ease 1s forwards;
+  animation: fadeInLeft 2s ease 1s forwards;
+  overflow: hidden;
+}
+.m3{
+  width: 40%;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+.m3box{
+  position: absolute;
+  bottom: 25%;
+  right: 1%;
+  width: 100%;
+  text-align: right;
+  -webkit-animation: fadeInRight 2s ease 1.5s forwards;
+  animation: fadeInRight 2s ease 1.5s forwards;
+  overflow: hidden;
+}
+.m4{
+  width: 22%;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+.m4box{
+  position: absolute;
+  bottom: 16.5%;
+  left: 8%;
+  width: 100%;
+  -webkit-animation: fadeInLeft 2s ease 2s forwards;
+  animation: fadeInLeft 2s ease 2s forwards;
+  overflow: hidden;
+}
+.m5{
+  width: 26%;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+.m5box{
+  position: absolute;
+  top: 77%;
+  left: 38%;
+  width: 100%;
+  -webkit-animation: fadeInLeft 2s ease 2.5s forwards;
+  animation: fadeInLeft 2s ease 2.5s forwards;
+  overflow: hidden;
+}
+.hideimg {
+  opacity: 0;
+}
+*/
+.hideimg {
+  opacity: 0;
+}

@@ -1,0 +1,640 @@
+* {
+	outline: none;
+	font-family: "Microsoft Yahei";
+	-webkit-tap-highlight-color: transparent;
+	/**以下两行隐藏一些input控件本身样式及select箭头***/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	/**以下3行解决webkit translation 闪烁问题**/
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+body, html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	background-color: #fff;
+}
+.clearfix {
+*zoom:1
+}
+.clearfix:before, .clearfix:after {
+	content: ' ';
+	display: table
+}
+.clearfix:after {
+	clear: both;
+}
+a {
+	text-decoration: none;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-type: none;
+}
+.hideimg {
+	opacity: 0;
+}
+
+/***arrow and loading***/
+/***音乐控制按钮****/
+.musicBar {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index: 20;
+	left: 37px;
+	bottom: 3px;
+}
+img.musicOn {
+	animation: rolling 1.2s linear infinite;
+	-webkit-animation: rolling 1.2s linear infinite;
+}
+.arrow {
+	width: 9.375%;
+	position: absolute;
+	bottom: 1.5%;
+	left: 45.3125%;
+	opacity: 1;
+	z-index: 99;
+}
+.arrow {
+	animation: arrow 1s ease-out infinite;
+	-webkit-animation: arrow 1s ease-out infinite;
+}
+.back {
+	width: 14.68%;
+	position: absolute;
+	top: 1.5%;
+	left: 3%;
+	opacity: 1;
+	z-index: 999;
+}
+/***loading 动画***/
+#loading {
+	width: 100%;
+	height: 100%;
+	background: #106796;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999999999;
+	text-align: center;
+}
+.spinner {
+	margin: 60% auto 0;
+	width: 150px;
+	text-align: center;
+}
+.spinner > div {
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation: bouncedelay 1.4s infinite ease-in-out;
+	/* Prevent first frame from flickering when animation starts */
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+ @-webkit-keyframes bouncedelay {
+ 0%, 80%, 100% {
+-webkit-transform: scale(0.0)
+}
+ 40% {
+-webkit-transform: scale(1.0)
+}
+}
+ @keyframes bouncedelay {
+ 0%, 80%, 100% {
+ transform: scale(0.0);
+ -webkit-transform: scale(0.0);
+}
+40% {
+ transform: scale(1.0);
+ -webkit-transform: scale(1.0);
+}
+}
+.main {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.page {
+	width: 100%;
+	height: 100%;
+	min-height:416px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #fff;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.imgBox {
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+.marginTop3 {
+	margin-top: 3%;
+}
+.marginTop5 {
+	margin-top: 5%;
+}
+.marginTop6 {
+	margin-top: 6%;
+}
+.marginTop8 {
+	margin-top: 8%;
+}
+.marginTop10 {
+	margin-top: 10%;
+}
+.marginTop13 {
+	margin-top: 13%;
+}
+.marginTop15 {
+	margin-top: 15%;
+}
+.marginTop18 {
+	margin-top: 18%;
+}
+.marginTop20 {
+	margin-top: 20%;
+}
+.marginTop22 {
+	margin-top: 22%;
+}
+.marginTop25 {
+	margin-top: 25%;
+}
+.marginTop30 {
+	margin-top: 30%;
+}
+#page1 {
+	z-index: 30;
+	background:none;
+	/*background: url(../images/bg1.jpg) no-repeat;
+	background-size: cover;*/
+}
+#page2 {
+	z-index: 18;/*display:block;*/
+}
+#page3 {
+	z-index: 17;/*display:none;*/
+}
+#page4 {
+	z-index: 16;/*display:none;*/
+}
+#page5 {
+	z-index: 15;/*display:none;*/
+}
+#page6 {
+	z-index: 14;/*display:none;*/
+}
+#page7 {
+	z-index: 13;/*display:none;*/
+}
+#page8 {
+	z-index: 12;/*display:none;*/
+}
+#page9 {
+	z-index: 11;/*display:none;*/
+}
+.logo {
+	width: 24.72%;
+	position: absolute;
+	right: 7%;
+	top: 5%;
+	z-index: 99;
+}
+.letters {
+	width: 94%;
+}
+.slogan {
+	width: 100%;
+}
+.tips{width:100%;text-align:center;margin:5px auto;font-size:14px;color:#fff;}
+#page1.current, #page2.current, #page3.current, #page4.current, #page5.current, #page6.current, #page7.current, #page8.current, #page9.current {
+	/*top: -120%;*/
+	transform:translate3d(0,-120%,0);
+	-webkit-transform:translate3d(0,-120%,0);
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+
+
+/**第二页**/
+#page2{
+	background: url(../images/bg23.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#page2 .page2-3 {
+	width: 75%;
+}
+#page2 .title1{
+	width: 46%;
+}
+.imgBoxtitle1{
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	top: 23%;
+	left: 0;
+}
+
+.imgBoxtitle2{
+	width: 100%;
+	text-align: right;
+	position: absolute;
+    top: 41%;
+    left: 0;
+}
+
+#page2 .title1{
+	-webkit-animation:tada 3s linear infinite;
+	animation: tada 3s linear infinite;
+}
+.active .slogan{
+	-webkit-animation: fadeInDown 1s ease 0.5s forwards;
+	animation: fadeInDown 1s ease 0.5s forwards;
+}
+#page2.active .slogan{
+	-webkit-animation: fadeInDown 2s ease 0.5s forwards;
+	animation: fadeInDown 2s ease 0.5s forwards;
+}
+
+
+.imgBoxair,.imgBoxsmallair{
+	width: 50%;
+	position: absolute;
+	bottom: -8px;
+}
+.air{
+	width: 52%;
+}
+.active .air{
+	-webkit-animation: fadeInLeft 1s ease 2.5s forwards;
+	animation: fadeInLeft 1s ease 2.5s forwards;
+}
+#page2.active .air{
+	-webkit-animation: fadeInLeft 3s ease 2.5s forwards;
+	animation: fadeInLeft 3s ease 2.5s forwards;
+}
+
+
+.imgBoxsmallair{
+	right: 0;
+	text-align: right;
+}
+.smallair{
+	width: 52%;
+}
+.active .smallair{
+	-webkit-animation: fadeInRight 1s ease 3s forwards;
+	animation: fadeInRight 1s ease 3s forwards;
+}
+#page2.active .smallair{
+	-webkit-animation: fadeInRight 3s ease 3s forwards;
+	animation: fadeInRight 3s ease 3s forwards;
+}
+
+
+.imgBoxtitle3{
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	top: 58%;
+	left: 0;
+}
+.title3{
+	width: 60%;
+}
+.active .title3{
+	-webkit-animation: fadeInRight 1s ease 1.5s forwards;
+	animation: fadeInRight 1s ease 1.5s forwards;
+}
+#page2.active .title3{
+	-webkit-animation: fadeInRight 3s ease 1.5s forwards;
+	animation: fadeInRight 3s ease 1.5s forwards;
+}
+
+/***第三页***/
+#page3{
+  background: url(../images/page3Bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.pageLogo{
+	height: 20%;
+	position: absolute;
+	bottom: 2%;
+	right: 5%;
+}
+.page3img1{
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 36.9%;
+	width: 50%;
+}
+.active .page3img1{
+	-webkit-animation: fadeInDown 1s ease 0.5s forwards;
+	animation: fadeInDown 1s ease 0.5s forwards;
+}
+.page3img2{
+	position: absolute;
+	top:36.9%;
+	left: 0;
+	height: 36.9%;
+	width: 50%;
+}
+.active .page3img2{
+	-webkit-animation: fadeInLeft 1s ease 1s forwards;
+	animation: fadeInLeft 1s ease 1s forwards;
+}
+.page3img3{
+	position: absolute;
+	top:36.9%;
+	right: 0;
+	height: 36.9%;
+	width: 50%;
+}
+.active .page3img3{
+	-webkit-animation: fadeInRight 1s ease 1.5s forwards;
+	animation: fadeInRight 1s ease 1.5s forwards;
+}
+.page3Logo{
+	position: absolute;
+	bottom:0;
+	right: 35%;
+	height: 24%;
+}
+.active .page3Logo{
+	-webkit-animation: fadeInUp 1s ease 1.5s forwards;
+	animation: fadeInUp 1s ease 1.5s forwards;
+}
+.air4{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 24%;
+}
+.active .air4{
+	-webkit-animation: fadeInLeft 1s ease 0.5s forwards;
+	animation: fadeInLeft 1s ease 0.5s forwards;
+}
+/***第四页***/
+#page4{
+  background: url(../images/page4Bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.page4Img1{
+	position: absolute;
+	top:1.5%;
+	right: 10px;
+	height: 23%;
+	width: 55.4%;
+}
+.active .page4Img1{
+	-webkit-animation: fadeInRight 1s ease 0.5s forwards;
+	animation: fadeInRight 1s ease 0.5s forwards;
+}
+.page4Img2{
+	position: absolute;
+	top:26%;
+	left: 10px;
+	height: 23%;
+	width: 55.4%;
+}
+.active .page4Img2{
+	-webkit-animation: fadeInLeft 1s ease 1s forwards;
+	animation: fadeInLeft 1s ease 1s forwards;
+}
+.page4Img3{
+	position: absolute;
+	top:52%;
+	right: 10px;
+	height: 23%;
+	width: 55.4%;
+}
+.active .page4Img3{
+	-webkit-animation: fadeInRight 1s ease 1.5s forwards;
+	animation: fadeInRight 1s ease 1.5s forwards;
+}
+.page4Img4{
+	position: absolute;
+	bottom:1%;
+	left: 10px;
+	height: 23%;
+	width: 55.4%;
+}
+.active .page4Img4{
+	-webkit-animation: fadeInLeft 1s ease 2s forwards;
+	animation: fadeInLeft 1s ease 2s forwards;
+}
+.air5{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 20%;
+}
+.active .air5{
+	-webkit-animation: fadeInLeft 1s ease 0.5s forwards;
+	animation: fadeInLeft 1s ease 0.5s forwards;
+}
+
+
+/***第五页***/
+#page5{
+	/*transform:rotate(-180deg);
+	-webkit-transform:rotate(-180deg);*/
+	overflow-y: auto;
+
+}
+.pageBg{
+	width: 100%;
+	overflow: hidden;
+}
+.pageBgimg{
+	width: 100%;
+}
+.jT {
+	width: 24%;
+	position: absolute;
+	bottom: 4%;
+	left: 10%;
+	opacity: 1;
+	z-index: 99;
+}
+.jT {
+	animation: arrow 1s ease-out infinite;
+	-webkit-animation: arrow 1s ease-out infinite;
+}
+.airBig{
+	width: 27%;
+	position: absolute;
+	bottom: 15%;
+	left: 10%;
+	opacity: 1;
+	z-index: 99;
+}
+.airBig{
+	-webkit-animation:pulse 2s linear infinite;
+	animation: pulse 2s linear infinite;
+}
+.position{
+	width: 14%;
+	position: absolute;
+	opacity: 1;
+	z-index: 99;
+}
+.position{
+	-webkit-animation:tada 2s linear infinite;
+	animation: tada 2s linear infinite;
+}
+.position1{
+	top:3%;
+	right: 15.5%;
+}
+.position2{
+	top:9.5%;
+	left: 24%;
+}
+.position3{
+	top:15%;
+	left: 4%;
+}
+.position4{
+	top:14.2%;
+	left: 43%;
+}
+.position5{
+	top:13.3%;
+	right: 23%;
+}
+.position6{
+	top:21%;
+	right: 15%;
+}
+.position7{
+	top:25.5%;
+	right: 30.5%;
+}
+.position8{
+	top:31.5%;
+	right: 40%;
+}
+.position9{
+	top:33.5%;
+	right: 27.5%;
+}
+.position10{
+	top:37.2%;
+	right: 42%;
+}
+.position11{
+	top:43.5%;
+	left: 5%;
+}
+.position12{
+	top:47%;
+	left: 22%;
+}
+.position13{
+	top:46%;
+	right: 32%;
+}
+.position14{
+	top:52.5%;
+	right: 11%;
+}
+
+
+/**iphone4***/
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2) {
+}
+
+/**iphone6s***/
+@media (device-height:736px) and (-webkit-min-device-pixel-ratio:3) {
+}
+.moduleBox{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+    display: none;
+	z-index: 19;
+}
+.moduleImg{
+	height: 40%;
+	margin-top: 50%;
+	background: url(../images/module1.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-0-transform:rotate(90deg);
+}
+.personImg{
+	width: 30%;
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-left: 8%;
+    vertical-align: top;
+}
+.moduleText{
+	display: inline-block;
+	width: 50%;
+	height: 50%;
+	overflow: hidden;
+	margin-top: 12%;
+	margin-left: 6%;
+}
+.fis{
+	width: 40%;
+}
+.moduleText>div{
+	word-break: break-all;
+}
+.moduleText>h3{
+	margin-bottom: 10px;
+}
+
+
+
+
+.fLogo{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 35%;
+}
+.fAir{
+	position: absolute;
+	bottom: 0px;
+	left: 30px;
+	width: 30%;
+}

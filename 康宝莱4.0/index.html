@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+<title>康宝莱</title>
+<link rel="shortcut icon" href="favicon.ico" >
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- <div id="loading">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div> -->
+
+<div id="main" class="main">
+   <!-- 音乐 -->
+   <img id="playMusic" class="musicBar musicOn" src="images/music.png" />
+
+
+   <div id="page1" class="page noswipe" style="display:none;"></div>
+
+   <div id="page2" class="page active">
+
+      <!-- <div class="imgBoxtitle1"><img class="title1" src="images/title1.png" /></div>
+      <div class="imgBoxtitle2"><img class="slogan hideimg" src="images/title2.png" /></div>
+      <div class="imgBoxair"><img class="air hideimg" src="images/air.png" /></div>
+      <div class="imgBoxtitle3"><img class="title3 hideimg" src="images/title3.png" /></div> -->
+      <div class="imgBoxsmallair"><img class="smallair hideimg" src="images/smallair.png" /></div>
+
+      <img class="arrow" src="images/jNext.png" style="left:75%;" />
+   </div>
+
+   <div id="page3" class="page">
+
+      <img src="images/logo.png" class="pageLogo" />
+      <!-- 图片一 -->
+      <img src="images/page3img1.png" class="page3img1 hideimg" />
+      <img src="images/page3img2.png" class="page3img2 hideimg" />
+      <img src="images/page3img3.png" class="page3img3 hideimg" />
+      <img src="images/page3Logo.png" class="page3Logo hideimg" />
+
+      <img src="images/air4.png" class="air4 hideimg" />
+
+      <img class="arrow" src="images/jNext.png" style="left: 26%;" />
+   </div>
+
+
+   <div id="page4" class="page">
+
+      <img src="images/logo.png" class="pageLogo" />
+      <!-- 图片一 -->
+      <img src="images/page4Img1.png" class="page4Img1 hideimg" />
+      <img src="images/page4Img2.png" class="page4Img2 hideimg" />
+      <img src="images/page4Img3.png" class="page4Img3 hideimg" />
+      <img src="images/page4Img4.png" class="page4Img4 hideimg" />
+
+      <img src="images/air4.png" class="air5 hideimg" />
+      <img class="arrow" src="images/jNext.png" style="left: 70%;" />
+   </div>
+
+   <div id="page5" class="page">
+      <div class="pageBg">
+        <img src="images/bg3.jpg" class="pageBgimg" />
+        <img src="images/airBig.png" class="airBig" />
+        <img class="jT" src="images/jT.png" onclick="backF()" />
+        <img class="cair" src="images/cair.png" />
+
+        <!-- 站标 -->
+        <img src="images/btnR.png" class="position1 position" dir="1"  onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position2 position" dir="2" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position3 position" dir="3" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position4 position" dir="4" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position5 position" dir="5" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position6 position" dir="6" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position7 position" dir="7" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position8 position" dir="8" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position9 position" dir="9" onclick="positionM(this)" />
+        <img src="images/btnR.png" class="position10 position" />
+        <img src="images/btnR.png" class="position11 position" />
+        <img src="images/btnR.png" class="position12 position" />
+        <img src="images/btnR.png" class="position13 position" />
+        <img src="images/btnR.png" class="position14 position" dir="14"  onclick="positionM(this)" />
+
+      </div>
+
+   </div>
+
+ <!-- 普通站 -->
+
+   <div class="moduleBox">
+     <div class="moduleImg">
+       <img src="images/609.jpg" class="personImg" />
+       <div class="moduleText">
+        <img src="images/f1.png" class="fis" />
+         <div class="moduleTextdiv">
+
+         </div>
+       </div>
+       <img src="images/fLogo.png" class="fLogo" />
+       <img src="images/fAir.png" class="fAir" />
+     </div>
+   </div>
+
+</div>
+
+<audio id="audio" src="images/1.mp3" autoplay="autoplay" loop preload="auto" style="display:none;"></audio>
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script>
+
+  //判断IOS设备
+  var u = navigator.userAgent.toLowerCase();
+  var isios = false;
+  if (/iphone|ipad|ipod/.test(u)) {
+	isios = true
+  }
+
+  //禁止下拉及默认滑动动作
+  document.getElementById("page2").addEventListener('touchmove',e,false);
+   document.getElementById("page3").addEventListener('touchmove',e,false);
+   document.getElementById("page4").addEventListener('touchmove',e,false);
+  function e(event){
+    event.preventDefault();
+  }
+
+  var $audio = document.getElementById("audio");
+  var once=1;
+  window.onload=function(){
+     $("#loading").css("display","none");
+  }
+
+  var current = 2;
+  var l = $(".page").length;
+  $(function(){
+
+  //触发音乐播放和暂停，解决ios不能自动播放音乐问题
+      $("body").one('touchstart',function(){
+        if(once==1 && $audio.paused){
+           $audio.play();
+           once=0;
+        }
+      });
+
+    function autoPlayAudio() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            // var globalAudio=document.getElementById("bgMusic");
+            $("#audio").get(0).play();
+        });
+    };
+    autoPlayAudio();
+
+
+	 //第1页动作
+  	$("#page1").on("swipe",function(e){
+
+  	});
+
+
+     //第2页动作
+    $("#page2").on("swipeUp",function(e){
+      goNext();
+    });
+
+      //第3页动作
+    $("#page3").on("swipeUp",function(e){
+      goNext();
+    });
+    $("#page3").on("swipeDown",function(e){
+      goPrev();
+    });
+      //第4页动作
+    $("#page4").on("swipeUp",function(e){
+      goNext();
+    });
+    $("#page4").on("swipeDown",function(e){
+      goPrev();
+    });
+     //第5页动作
+
+
+    function goNext(){
+      if(current<l){
+        $("#page"+current+"").addClass("current");
+      $("#page"+(current+1)+"").addClass("active");
+      setTimeout(function(){
+         $("#page"+current+"").removeClass("active");
+         current++;
+      },1000);
+    }else{
+      return false;
+    }
+    }
+    function goPrev(){
+      if(current>2){
+        $("#page"+(current-1)+"").removeClass("current");
+        $("#page"+(current-1)+"").addClass("active");
+      setTimeout(function(){
+           $("#page"+current+"").removeClass("active");
+           current--;
+        },1000);
+      }else{
+        return false;
+      }
+    }
+
+
+
+
+  });
+// 站点弹窗
+$(".moduleBox").click(function(){
+  $(".moduleBox").hide();
+})
+// 站点十1
+$(".position10").click(function(){
+   window.location.href="module11.html"
+});
+// 站点十2
+$(".position11").click(function(){
+   window.location.href="module12.html"
+});
+// 站点十3
+$(".position12").click(function(){
+   window.location.href="module13.html"
+});
+// 站点十4
+$(".position13").click(function(){
+   window.location.href="module14.html"
+});
+
+function positionM(obj){
+  var dirImg=$(obj).attr("dir");
+  // alert(dirImg);
+  if(dirImg == 1){
+    $(".moduleBox").find(".fis").attr("src","images/f1.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 2){
+    $(".moduleBox").find(".fis").attr("src","images/f2.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 3){
+    $(".moduleBox").find(".fis").attr("src","images/f3.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 4){
+    $(".moduleBox").find(".fis").attr("src","images/f4.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 5){
+    $(".moduleBox").find(".fis").attr("src","images/f5.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 6){
+    $(".moduleBox").find(".fis").attr("src","images/f6.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 7){
+    $(".moduleBox").find(".fis").attr("src","images/f7.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 8){
+    $(".moduleBox").find(".fis").attr("src","images/f8.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 9){
+    $(".moduleBox").find(".fis").attr("src","images/f9.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }if(dirImg == 14){
+    $(".moduleBox").find(".fis").attr("src","images/f14.png");
+    $(".moduleText").find(".moduleTextdiv").html("床前明月光，疑是地上霜，举头望明月，低头思故乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡乡");
+  }
+  $(".moduleBox").show();
+}
+// 刷新页面
+function backF(){
+  window.location.reload()
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

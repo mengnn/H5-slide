@@ -1,0 +1,105 @@
+body,html{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  background: url(../images/moduleBg.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.bg2{
+  position: absolute;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+.imgLeft{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+.img1{
+width: 100%;
+}
+.hideimg {
+opacity: 0;
+}
+.imgLeft{
+-webkit-animation: fadeInDown 2s ease 0.5s forwards;
+animation: fadeInDown 2s ease 0.5s forwards;
+}
+.imgText{
+height: 44%;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+.imgText{
+-webkit-animation: fadeInRight 2s ease 1.5s forwards;
+animation: fadeInRight 2s ease 1.5s forwards;
+}
+.img3{
+height: 100%;
+}
+.imgTextdiv{
+transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-0-transform:rotate(90deg);
+position: absolute;
+top: 50%;
+right: 0;
+font-size: 24px;
+}
+.imgBottom{
+position: absolute;
+bottom: 0;
+left: 0;
+height: 62%;
+}
+.imgBottom{
+-webkit-animation: fadeInLeft 2s ease 1 forwards;
+animation: fadeInLeft 2s ease 1s forwards;
+}
+.img2{
+height: 100%;
+}
+.imgNum{
+width: 40%;
+position: absolute;
+bottom: 1%;
+right: 19%;
+/*-webkit-animation: fadeInDown 3s ease 2s forwards;
+animation: fadeInDown 3s ease 2s forwards;*/
+-webkit-animation:tada 3s linear infinite;
+animation: tada 3s linear infinite;
+}
+.img1position{
+position: absolute;
+transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-moz-transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-0-transform:rotate(135deg);
+width: 34%;
+left: 31%;
+top: 18%;
+}
+.img2position{
+position: absolute;
+transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-0-transform:rotate(90deg);
+height: 40%;
+left: 23%;
+top: 25%;
+}

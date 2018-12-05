@@ -1,0 +1,353 @@
+ html,body{
+  padding: 0px;
+  margin:0px;
+  height: 100%;
+  width: 100%;
+}
+.mainBox{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.mainContent{
+  width: 100%;
+  overflow: hidden;
+}
+.page1{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: url(../images/bg1.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.arrow {
+  width: 9%;
+  position: absolute;
+  top: 14%;
+  left: 9%;
+  opacity: 1;
+  z-index: 99;
+}
+.arrow {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.blueair {
+  width: 9%;
+  position: absolute;
+  top: 7%;
+  left: 9%;
+  opacity: 1;
+  z-index: 99;
+}
+.blueair {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.logo{
+  width: 6.5%;
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  opacity: 1;
+  z-index: 99;
+}
+.page2{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.bg2{
+  width: 100%;
+}
+
+
+.position{
+  width: 11%;
+  position: absolute;
+  opacity: 1;
+  z-index: 99;
+}
+.position{
+  -webkit-animation:tada 2s linear infinite;
+  animation: tada 2s linear infinite;
+}
+.position1{
+  top:7.5%;
+  right: 14.5%;
+}
+.position2{
+  top:13%;
+  left: 27%;
+}
+.position3{
+  top:19%;
+  left: 8%;
+}
+.position4{
+  top:18%;
+  left: 48%;
+}
+.position5{
+  top:17%;
+  right: 24%;
+}
+.position6{
+  top:23.5%;
+  right: 17%;
+}
+.position7{
+  top:27%;
+  right: 32.5%;
+}
+.position8{
+  top:32%;
+  right: 44%;
+}
+.position89{
+  top:41%;
+  right: 25%;
+}
+.position9{
+  top:34.5%;
+  right: 28.5%;
+}
+.position10{
+  top:37.7%;
+  right: 42%;
+}
+.position11{
+  top:42.5%;
+  left: 10%;
+}
+.position12{
+  top:46%;
+  left: 24%;
+}
+.position13{
+  top:45%;
+  right: 35%;
+}
+.position14{
+  top:50.5%;
+  right: 11%;
+}
+.cair{
+  width: 33%;
+  position: absolute;
+  bottom: 17%;
+  left: 0;
+  opacity: 1;
+  z-index: 99;
+}
+.airBig{
+  width: 39%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  opacity: 1;
+  z-index: 99;
+}
+.airBig{
+  -webkit-animation:pulse 2s linear infinite;
+  animation: pulse 2s linear infinite;
+}
+.arrow2 {
+  width: 11%;
+  position: absolute;
+  bottom: 1.5%;
+  left: 11%;
+  opacity: 1;
+  z-index: 99;
+}
+.arrow2 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.blueair2 {
+  width: 11%;
+  position: absolute;
+  bottom: 4.5%;
+  left: 11%;
+  opacity: 1;
+  z-index: 99;
+}
+.blueair2 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.page3{
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/bg3.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.moduleBox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+    display: none;
+  z-index: 219;
+}
+.moduleImg{
+  width: 100%;
+  height: 90%;
+  margin-top: 10%;
+  text-align: center;
+}
+.fimg{
+  height: 100%;
+}
+.flogo{
+  position: absolute;
+  width: 8%;
+  bottom: 8%;
+  right: 19%;
+}
+.arrow3 {
+  width: 8%;
+  position: absolute;
+  top: 18%;
+  left: 21%;
+  opacity: 1;
+  z-index: 99;
+}
+.arrow3 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.blueair3 {
+  width: 8%;
+  position: absolute;
+  top: 11%;
+  left: 21%;
+  opacity: 1;
+  z-index: 99;
+}
+.blueair3 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.fm{
+  width: 8%;
+  position: absolute;
+  top: 14%;
+  right: 21%;
+  opacity: 1;
+  z-index: 99;
+}
+.fposition{
+  width: 10%;
+  position: absolute;
+  top: 8.5%;
+  right: 20%;
+  opacity: 1;
+  z-index: 99;
+  animation: pulse  1s ease-out infinite;
+  -webkit-animation: pulse  1s ease-out infinite;
+}
+/***音乐控制按钮****/
+.musicBar {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 999;
+  right: 40px;
+  top: 15px;
+}
+img.musicOn {
+  animation: rolling 1.2s linear infinite;
+  -webkit-animation: rolling 1.2s linear infinite;
+}
+.fzhongBox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 11111;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.fzhong{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+.arrow4 {
+  width: 10%;
+  position: absolute;
+  top: 18%;
+  left: 7%;
+  opacity: 1;
+  z-index: 99;
+}
+.arrow4 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.blueair4 {
+  width: 10%;
+  position: absolute;
+  top: 9%;
+  left: 7%;
+  opacity: 1;
+  z-index: 99;
+}
+.blueair4 {
+  animation: arrow 1s ease-out infinite;
+  -webkit-animation: arrow 1s ease-out infinite;
+}
+.flogo2{
+  position: absolute;
+  width: 8%;
+  top: 5%;
+  right: 4%;
+}
+.back{
+  position: absolute;
+  width: 8%;
+  left: 10%;
+  bottom: 5%;
+}
+.img89{
+  position: absolute;
+  width: 4%;
+  right: 18%;
+  top: 40%;
+}
+.page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:url(../images//pagebg.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  z-index: 11111111;
+}
+.smalllogo{
+  position: absolute;
+  top:41%;
+  right: 45%;
+  width: 8%;
+}
+
+.smallair{
+  position: absolute;
+  /*top:32%;*/
+  top:-10%;
+  right: 45%;
+  width: 8%;
+}
+.hid{
+  opacity: 0;
+}
+/*.smallair{
+  -webkit-animation: fadeInDown 5s ease 1s forwards;
+  animation: fadeInDown 5s ease 1s forwards;
+}*/
+

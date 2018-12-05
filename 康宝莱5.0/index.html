@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <!-- 设置 viewport -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <meta name="Author" content="Nicholas.meng" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+</head>
+<body>
+<div class="mainBox">
+ <div class="mainContent">
+   <!-- 音乐 -->
+   <img id="playMusic" class="musicBar musicOn" src="images/music.png" />
+
+   <div class="page">
+      <img src="images/smalllogo.png" class="smalllogo" />
+      <img src="images/smallair.png" class="smallair" />
+   </div>
+
+   <div class="page1">
+    <img class="blueair" src="images/blueair.png" />
+    <img class="arrow" src="images/jNext.png" />
+    <img class="logo" src="images/logo.png" />
+   </div>
+   <div class="page2">
+     <img src="images/bg2.png" class="bg2" />
+
+      <!-- 站标 -->
+      <img src="images/btnR.png" class="position1 position" dir="1"  onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position2 position" dir="2" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position3 position" dir="3" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position4 position" dir="4" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position5 position" dir="5" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position6 position" dir="6" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position7 position" dir="7" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position8 position" dir="8" onclick="positionM(this)" />
+
+      <img src="images/btnR.png" class="position89 position" />
+
+      <img src="images/btnR.png" class="position9 position" dir="9" onclick="positionM(this)" />
+      <img src="images/btnR.png" class="position10 position" />
+      <img src="images/btnR.png" class="position11 position" />
+      <img src="images/btnR.png" class="position12 position" />
+      <img src="images/btnR.png" class="position13 position" />
+      <img src="images/btnR.png" class="position14 position"/>
+
+      <img src="images/img89.png" class="img89"/>
+
+      <img class="cair" src="images/cair.png" />
+      <img src="images/airBig.png" class="airBig" />
+
+      <a href="#page3"><img class="blueair2" src="images/blueair.png" /></a>
+      <img class="arrow2" src="images/jNext.png" />
+   </div>
+
+   <div class="page3" id="page3"></div>
+
+ </div>
+
+</div>
+
+
+<!-- module -->
+
+<div class="moduleBox">
+ <div class="moduleImg">
+
+   <img src="images/btnR2.png" class="fposition" />
+   <img src="images/f1.png" class="fm" />
+
+   <img src="images/1.png" class="fimg" />
+   <img src="images/logo2.png" class="flogo" />
+
+   <img class="blueair3" src="images/blueair.png" />
+    <img class="arrow3" src="images/jNext.png" />
+ </div>
+</div>
+
+<div class="fzhongBox">
+
+
+  <img src="images/f10.png" class="fzhong" />
+
+  <img class="blueair4" src="images/blueair.png" />
+  <img class="arrow4" src="images/jNext.png" />
+   <img src="images/logo2.png" class="flogo2" />
+   <img src="images/back.png" class="back" />
+</div>
+
+
+
+<audio id="audio" src="images/1.mp3" dir="1" loop preload="auto" style="display:none;"></audio>
+<script src="js/jquery.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script>
+
+  var winH=$(document).height();
+  var winW=$(document).width();
+  //alert(winH+"----"+winW);
+  $(".page1").width(winW);
+  $(".page1").height(winH);
+  $(".page3").width(winW);
+  $(".page3").height(winH);
+  $(".page").width(winW);
+  $(".page").height(winH);
+
+
+ var t = 0;
+ var h = $(".mainContent").height();
+ var htmlH=$(".mainBox").height();
+ var scrollHeigh=h-htmlH;
+  //console.log(t+"---"+h+"---"+scrollHeigh);
+
+
+
+     // 站点弹窗
+$(".moduleBox").click(function(){
+  $(".moduleBox").hide();
+})
+
+
+function positionM(obj){
+  var dirImg=$(obj).attr("dir");
+  // alert(dirImg);
+  if(dirImg == 1){
+    $(".moduleBox").find(".fm").attr("src","images/f1.png");
+    $(".moduleBox").find(".fimg").attr("src","images/1.png");
+  }if(dirImg == 2){
+    $(".moduleBox").find(".fm").attr("src","images/f2.png");
+    $(".moduleBox").find(".fimg").attr("src","images/2.png");
+  }if(dirImg == 3){
+    $(".moduleBox").find(".fm").attr("src","images/f3.png");
+    $(".moduleBox").find(".fimg").attr("src","images/3.png");
+  }if(dirImg == 4){
+    $(".moduleBox").find(".fm").attr("src","images/f4.png");
+    $(".moduleBox").find(".fimg").attr("src","images/4.png");
+  }if(dirImg == 5){
+    $(".moduleBox").find(".fm").attr("src","images/f5.png");
+    $(".moduleBox").find(".fimg").attr("src","images/5.png");
+  }if(dirImg == 6){
+    $(".moduleBox").find(".fm").attr("src","images/f6.png");
+    $(".moduleBox").find(".fimg").attr("src","images/6.png");
+  }if(dirImg == 7){
+    $(".moduleBox").find(".fm").attr("src","images/f7.png");
+    $(".moduleBox").find(".fimg").attr("src","images/7.png");
+  }if(dirImg == 8){
+    $(".moduleBox").find(".fm").attr("src","images/f8.png");
+    $(".moduleBox").find(".fimg").attr("src","images/8.png");
+  }if(dirImg == 9){
+    $(".moduleBox").find(".fm").attr("src","images/f9.png");
+    $(".moduleBox").find(".fimg").attr("src","images/9.png");
+  }
+  $(".moduleBox").show();
+}
+
+
+function autoPlayAudio() {
+    wx.config({
+        // 配置信息, 即使不正确也能使用 wx.ready
+        debug: false,
+        appId: '',
+        timestamp: 1,
+        nonceStr: '',
+        signature: '',
+        jsApiList: []
+    });
+    wx.ready(function() {
+        // var globalAudio=document.getElementById("bgMusic");
+        $("#audio").get(0).play();
+    });
+};
+
+
+var once=0;
+var $audio = document.getElementById("audio");
+$(".musicBar").click(function(){
+  if(once == 1){
+    $audio.play();
+    once=0;
+  }else{
+    $audio.pause();
+    once=1;
+  }
+});
+
+$(".position10").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f10.png");
+});
+$(".position11").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f11.png");
+});
+$(".position12").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f12.png");
+});
+$(".position13").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f13.png");
+});
+$(".position14").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f14.png");
+});
+$(".position89").click(function(event) {
+  $(".fzhongBox").show();
+  $(".fzhong").attr("src","images/f89.png");
+});
+$(".fzhongBox").click(function(event) {
+  $(".fzhongBox").hide();
+});
+
+//
+$(".smallair").animate({
+  top: "110%"
+ },
+  3000,function(){
+    $(".page").animate({
+      opacity:0},
+      500, function() {
+        $(".page").hide();
+       //$audio.play();
+       autoPlayAudio();
+      var hSet=setInterval(function(){
+      t=t+10;
+       //console.log(t)
+      if(t>winH+10){
+        clearInterval(hSet)
+       t=0
+      }else{
+        //console.log(2)
+       $('.mainBox').animate({'scrollTop':t},50);
+      }
+ },20)
+    });
+  });
+
+</script>
+
+</body>
+</html>

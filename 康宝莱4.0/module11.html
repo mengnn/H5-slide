@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第十一站</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="css/module11.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="main" style="background: url(images/module123.png) 0 0 no-repeat;background-size: 100% 100%;">
+
+
+  <img src="images/blue.png" class="blue hideimg" />
+  <img src="images/blueLeft.png" class="blueLeft hideimg" />
+  <img src="images/mou1.png" class="mou1 hideimg" />
+  <img src="images/mou2.png" class="mou2 hideimg" />
+  <img src="images/mou3.png" class="mou3 hideimg" />
+  <img src="images/mou4.png" class="mou4 hideimg" />
+  <img src="images/mou5.png" class="mou5 hideimg" />
+  <img src="images/mou5.png" class="mou5 hideimg" />
+
+
+  <img src="images/modName1.png" class="modName1" />
+  <img src="images/logoBlue.png" class="logoBlue" />
+  <!-- logo -->
+  <img src="images/moduleLogo.png" class="moduleLogo" />
+  <!--感恩 -->
+  <img src="images/gane.png" class="gane hideimg" />
+
+  <!-- 图片一 -->
+  <!-- <div class="m1box hideimg">
+    <img src="images/m1.png" class="m1" />
+  </div> -->
+  <!-- 图片二 -->
+  <!-- <div class="m2box hideimg">
+    <img src="images/m2.png" class="m2" />
+  </div> -->
+  <!-- 图片三 -->
+  <!-- <div class="m3box hideimg">
+    <img src="images/m3.png" class="m3" />
+  </div> -->
+  <!-- 图片四 -->
+  <!-- <div class="m4box hideimg">
+    <img src="images/m4.png" class="m4" />
+  </div> -->
+  <!-- 图片五 -->
+  <!-- <div class="m5box hideimg">
+    <img src="images/m5.png" class="m5" />
+  </div> -->
+  <!-- 箭头 -->
+  <img src="images/jNext.png" class="jNext" />
+
+</div>
+
+<audio id="audio" src="images/1.mp3" autoplay="autoplay" loop preload="auto" style="display:none;"></audio>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script>
+  $(function(){
+    //触发音乐播放和暂停，解决ios不能自动播放音乐问题
+      $("body").one('touchstart',function(){
+      if(once==1 && $audio.paused){
+         $audio.play();
+         once=0;
+      }
+    });
+
+    function autoPlayAudio() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            // var globalAudio=document.getElementById("bgMusic");
+            $("#audio").get(0).play();
+        });
+    };
+    autoPlayAudio();
+    $(".jNext").click(function(event) {
+       history.go(-1);
+    });
+  })
+</script>
+</html>
